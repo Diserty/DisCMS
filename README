@@ -1,0 +1,93 @@
+DisCMS's README ....
+
+@website............ http://diserty.ath.cx
+@msn................ fra.diserty@gmail.com
+@mail............... fra.diserty@gmail.com
+@irc................ diserty.ath.cx
+@irc#channel........ #diserty
+@project_page....... http://diserty.ath.cx/sources.php#DisCMS
+
+
+[CHANGELOG]
+0.0.1
+[*] Profili utente
+[*] Pannello utente
+[*] Blog
+[*] Forum
+
+[INSTALLATION]
+Per installare DisCMS e' necessario configurare config.inc.php con i parametri per connettersi al database...
+Dopodiche' e' necessario eseguire la seguente query sul database creato.
+
+-- TABLE articles
+CREATE TABLE `articles` (
+`id` INT(5) NOT NULL AUTO_INCREMENT,
+`title` VARCHAR(255),
+`message` TEXT,
+`author_id` INT(5),
+`date` VARCHAR(255),
+`time` VARCHAR(255),
+PRIMARY KEY(`id`)
+);
+
+-- TABLE comments
+CREATE TABLE `comments` (
+`id` INT(5) NOT NULL AUTO_INCREMENT,
+`author` VARCHAR(255),
+`text` TEXT,
+`art_id` INT(5),
+`date` VARCHAR(255),
+`time` VARCHAR(255),
+PRIMARY KEY(`id`));
+
+-- TABLE forums
+CREATE TABLE `forums` (
+`id` INT(5) NOT NULL AUTO_INCREMENT,
+`name` VARCHAR(255),
+`desc` VARCHAR(255),
+`last_author_id` INT(5),
+PRIMARY KEY(`id`)
+);
+
+-- TABLE topics
+CREATE TABLE `topics` (
+`id` INT(5) NOT NULL AUTO_INCREMENT,
+`name` VARCHAR(255),
+`message` TEXT,
+`date` VARCHAR(255),
+`time` VARCHAR(255),
+`forum_id` INT(5),
+`author_id` INT(5),
+PRIMARY KEY(`id`)
+);
+
+-- TABLE users
+CREATE TABLE `users` (
+`id` INT(5) NOT NULL AUTO_INCREMENT,
+`username` VARCHAR(255),
+`password` VARCHAR(255),
+`mail` VARCHAR(255),
+`user_avatar` VARCHAR(255),
+`level` INT(5),
+PRIMARY KEY(`id`)
+);
+INSERT INTO `users` (
+username, password, mail, user_avatar, level ) VALUES (
+'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin@admin.it', 'noavatar.jpg', 3);
+
+
+-- TABLE users_info
+CREATE TABLE `users_info` (
+`user_id` INT(5),
+`msn` VARCHAR(255),
+`website` VARCHAR(255),
+`from` VARCHAR(255),
+`job` VARCHAR(255),
+`forum_sign` VARCHAR(255),
+PRIMARY KEY(`id`)
+);
+
+
+Spero vi piaccia!
+Ciao ciao! :D
+

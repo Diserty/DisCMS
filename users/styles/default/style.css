@@ -1,0 +1,78 @@
+body {
+	background: #000;
+	font-family: Courier New;
+	color: #FFFFFF;
+}
+
+a {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+a:Visited {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+a:Hover {
+	text-decoration: none;
+	color: #0066FF;
+}
+
+hr {
+	border: 1px solid #696969;
+	color: #696969;
+	background: #696969;
+}
+
+#header {
+	text-align: center;
+	font-size: 25px;
+}
+
+#content #page {
+	font-size: 14px;
+	text-align: justify;
+	margin-left: 25%;
+}
+
+#content #page #post {
+	width: 580px;
+}
+
+#content #menu {
+	text-align: center;
+	font-size: 15px;
+}
+
+#profile {
+	border: 1px dashed #FFFFFF;
+	font-size: 15px;
+}
+
+#topic {
+	border: 1px solid #FFFFFF;
+	width: 600px;
+}
+
+#viewforums {
+	border: 1px dashed #FFFFFF;
+	width: 580px;
+}
+
+#viewforums td {
+	border-bottom: 2px solid #696969;
+}
+
+#viewforums #forumname {
+	font-size: 17px;
+}
+
+#viewforums #forumdesc {
+	font-size: 13px;
+}
+
+#footer {
+	text-align: right;
+	font-size: 12px;
+}
